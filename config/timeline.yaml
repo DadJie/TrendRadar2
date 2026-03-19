@@ -148,7 +148,42 @@ presets:
       6: "all_day"                 # 周六
       7: "all_day"                 # 周日
 
-
+  custom_periods:
+  - name: "morning"
+    days: [1,2,3,4,5,6,7]
+    time: "07:00"
+    push_window_start: "22:00"
+    push_window_end: "07:00"
+    cross_midnight: true
+    mode: "incremental"
+  
+  - name: "late_morning"
+    days: [1,2,3,4,5,6,7]
+    time: "11:00"
+    push_window_start: "07:00"
+    push_window_end: "11:00"
+    mode: "incremental"
+  
+  - name: "afternoon"
+    days: [1,2,3,4,5,6,7]
+    time: "14:00"
+    push_window_start: "11:00"
+    push_window_end: "14:00"
+    mode: "incremental"
+  
+  - name: "evening"
+    days: [1,2,3,4,5,6,7]
+    time: "18:00"
+    push_window_start: "14:00"
+    push_window_end: "18:00"
+    mode: "incremental"
+  
+  - name: "night"
+    days: [1,2,3,4,5,6,7]
+    time: "22:00"
+    push_window_start: "18:00"
+    push_window_end: "22:00"
+    mode: "incremental"
   # ───────────────────────────────────────────────────────────
   # 2️⃣ morning_evening - 早晚汇总（推荐）
   #
