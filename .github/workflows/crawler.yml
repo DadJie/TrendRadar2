@@ -43,6 +43,9 @@ on:
     - cron: "0 14 * * *"  # 北京 22:00（推送 18:00-22:00）
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  
 concurrency:
   group: crawler-${{ github.ref_name }}
   cancel-in-progress: true
